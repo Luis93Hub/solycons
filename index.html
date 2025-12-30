@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConstruRemodel - Remodelación Integral de Viviendas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header y navegación -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img class="logo-solycons" src="logo.png" alt="logo-solycons">
+                <h1>SOL<span class="titleHighlighting1">Y</span><span class="titleHighlighting2">CONS</span></h1>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Transformamos tu hogar con calidad y profesionalismo</h1>
+            <p>Especialistas en remodelación integral de viviendas: techos, pisos, trabajos en hierro, portones y más. Más de 17 años creando espacios soñados.</p>
+            <a href="#contacto" class="btn">Solicitar presupuesto</a>
+            <a href="#galeria" class="btn btn-secondary">Ver nuestra galería</a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <p class="section-subtitle">Ofrecemos soluciones integrales para la remodelación y mejora de tu vivienda, con materiales de calidad y mano de obra especializada.</p>
+            
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('src/images/structura.jpeg');"></div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-home"></i> Remodelación Integral</h3>
+                        <p>Transformamos por completo tu vivienda, desde la estructura hasta los acabados finales, con diseño funcional y estético.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url(src//images/porton-forjado-hierro-y-charola.jpeg) ;"></div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-toolbox"></i> Trabajos en Hierro</h3>
+                        <p>Fabricación e instalación de portones, barandales, puertas, ventanas y estructuras metálicas a medida.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('src/images/cambio-de-techo.jpeg');"></div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-layer-group"></i> Cambio de Techos y Pisos</h3>
+                        <p>Instalación de techos nuevos, reparación de goteras y colocación de pisos de cerámica, madera, porcelanato, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Proyectos -->
+    <section class="gallery-section" id="galeria">
+        <div class="container">
+            <h2>Galería de Nuestros Trabajos</h2>
+            <p class="section-subtitle">Explora nuestros proyectos realizados, organizados por categorías. Haz clic en cualquier imagen para verla en tamaño completo.</p>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="techos">Techos</button>
+                <button class="filter-btn" data-filter="pisos">Pisos</button>
+                <button class="filter-btn" data-filter="hierro">Trabajos en Hierro</button>
+                <button class="filter-btn" data-filter="portones">Portones</button>
+                <button class="filter-btn" data-filter="remodelacion">Remodelación Integral</button>
+                <button class="filter-btn" data-filter="cocinas">Cocinas</button>
+                <button class="filter-btn" data-filter="banos">Baños</button>
+            </div>
+            
+            <div class="gallery-container" id="galleryContainer">
+                <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes ampliadas -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <span class="modal-nav modal-prev" id="modalPrev">&#10094;</span>
+        <span class="modal-nav modal-next" id="modalNext">&#10095;</span>
+        <div class="modal-content">
+            <img class="modal-img" id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- Sobre Nosotros -->
+    <section class="section-light" id="nosotros">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Con más de 17 años de experiencia en el sector de la construcción y remodelación, en <strong>SOLYCONS</strong> nos especializamos en transformar viviendas para crear espacios funcionales, seguros y estéticamente atractivos.</p>
+                    
+                    <p>Nuestro equipo de profesionales cuenta con la capacitación necesaria para ejecutar proyectos de cualquier envergadura, siempre garantizando calidad, cumplimiento de plazos y transparencia en los costos.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Más de 200 proyectos completados</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Garantía en todos nuestros trabajos</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Materiales de primera calidad</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Presupuestos sin compromiso</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contacto" class="btn">Contáctanos</a>
+                </div>
+                
+                <div class="about-image">
+                    <img src="src/images/sobre-nosotros.jpeg" alt="Equipo de ConstruRemodel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section id="proyectos">
+        <div class="container">
+            <h2>Proyectos Destacados</h2>
+            <p class="section-subtitle">Algunos ejemplos de nuestro trabajo en remodelación de viviendas y trabajos especializados.</p>
+            
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('src/images/remodelación-integral-de-cocina.jpeg');"></div>
+                    <div class="project-overlay">
+                        <h3>Remodelación de Cocina Integral</h3>
+                        <p>Cambio completo de pisos, instalación de muebles nuevos y actualización eléctrica.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('src/images/Portón-de-Hierro-Personalizado.jpeg');"></div>
+                    <div class="project-overlay">
+                        <h3>Portón de Hierro Personalizado</h3>
+                        <p>Diseño y fabricación de portón de seguridad con detalles ornamentales.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('src/images/instalación-de-techo.jpeg');"></div>
+                    <div class="project-overlay">
+                        <h3>Cambio de Techo Completo</h3>
+                        <p>Sustitución de techo antiguo por lámina galvanizada con aislamiento térmico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section-light" id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p class="section-subtitle">Solicita un presupuesto gratuito o consulta cualquier duda sobre nuestros servicios.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Colegio pureza de María 2 cuadras abajo<br>Nicaragua-León</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+505 81698320</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>mayorgahenry07@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 9:00 AM - 7:00 PM<br>Sábados: 9:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Presupuesto sin compromiso</h3>
+                    <p>Evaluamos tu proyecto y te brindamos una cotización clara y transparente.</p>
+
+                    <ul style="margin-bottom:20px; line-height:1.8;">
+                        <li>✔ Atención personalizada</li>
+                        <li>✔ Visita técnica</li>
+                        <li>✔ Garantía en trabajos</li>
+                    </ul>
+
+                    <a href="https://wa.me/50581698320" class="btn" style="width:100%;">Solicitar presupuesto por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="https://wa.me/50581698320" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                  <div class="footer-column">
+                    <h3>ConstruRemodel</h3>
+                    <p>Especialistas en remodelación de viviendas con más de 15 años de experiencia, comprometidos con la calidad y satisfacción del cliente.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#servicios">Remodelación Integral</a></li>
+                        <li><a href="#servicios">Trabajos en Hierro</a></li>
+                        <li><a href="#servicios">Cambio de Techos</a></li>
+                        <li><a href="#servicios">Cambio de Pisos</a></li>
+                        <li><a href="#servicios">Portones y Rejas</a></li>
+                        <li><a href="#servicios">Reparaciones Generales</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Colegio pureza de María 2 cuadras abajo, Nicaragua-León</li>
+                        <li><i class="fas fa-phone"></i> +505 81698320</li>
+                        <li><i class="fas fa-envelope"></i> mayorgahenry07@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Lun-Vie: 9:00 AM - 7:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 SOLYCONS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
